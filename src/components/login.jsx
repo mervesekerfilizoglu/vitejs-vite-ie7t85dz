@@ -41,27 +41,27 @@ export default function Login() {
 
     // E-posta validasyonu
     if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(form.email)) {
-      newErrors.email = errorMessages.email; // Geçersiz e-posta durumu
+      newErrors.email = errorMessages.email; // Geçersiz e-posta durumu.
     }
 
-    // Şifre validasyonu
+    // Şifre validasyonu.
     if (form.password.length < 4) {
-      newErrors.password = errorMessages.password; // Geçersiz şifre durumu
+      newErrors.password = errorMessages.password; // Geçersiz şifre durumu.
     }
 
-    // Terms checkbox validasyonu
+    // Terms checkbox validasyonu.
     if (!form.terms) {
-      newErrors.terms = 'You must agree to the terms of service'; // Terms kabul edilmedi durumu
+      newErrors.terms = 'You must agree to the terms of service'; // Terms kabul edilmedi durumu.
     }
 
-    setErrors(newErrors); // Yeni hata mesajlarını güncelle
-    setIsValid(Object.keys(newErrors).length === 0); // Eğer hata yoksa form geçerli sayılır
+    setErrors(newErrors); // Yeni hata mesajlarını güncelle.
+    setIsValid(Object.keys(newErrors).length === 0); // Eğer hata yoksa form geçerli sayılır.
   };
 
-  // Her form değişikliğinde validasyonu kontrol ediyoruz
+  // Her form değişikliğinde validasyonu kontrol ediyoruz.
   useEffect(() => {
     validateForm();
-  }, [form]); // form değiştiğinde validasyonu yeniden kontrol et
+  }, [form]); // form değiştiğinde validasyonu yeniden kontrol et.
 
   // Formu gönderme işlemi
   const handleSubmit = (event) => {

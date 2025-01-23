@@ -18,7 +18,7 @@ describe('Login Form Test', () => {
     });
   });
   
-  //İkinci Test Senaryosu: Hatalı Form Gönderimi: Bu test, hatalı e-posta veya şifre girildiğinde, hata mesajlarının doğru şekilde görünüp butonun devre dışı kalıp kalmadığını kontrol eder.
+  //İkinci Test Senaryosu: Hatalı Form Gönderimi: Bu test, hatalı e-posta veya şifre girildiğinde, hata mesajlarının doğru şekilde görünüp butonun devre dışı kalıp kalmadığını kontrol ettik.
   
   describe('Login Form Error Test', () => {
     it('should show error when email is invalid', () => {
