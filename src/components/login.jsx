@@ -10,32 +10,32 @@ import {
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
-// Form için başlangıç değerleri
+// Form için başlangıç değerleri.
 const initialForm = {
   email: '',
   password: '',
   terms: false,
 };
 
-// Hata mesajları için constant
+// Hata mesajları için constant.
 const errorMessages = {
   email: 'Please enter a valid email address',
   password: 'Password must be at least 4 characters long',
 };
 
 export default function Login() {
-  const [form, setForm] = useState(initialForm); // Form verilerini tutan state
-  const [errors, setErrors] = useState({}); // Hata mesajlarını tutan state
-  const [isValid, setIsValid] = useState(false); // Formun geçerli olup olmadığını kontrol eden state
-  const history = useHistory(); // Sayfa yönlendirmelerini yönetmek için kullanılır
+  const [form, setForm] = useState(initialForm); // Form verilerini tutan state.
+  const [errors, setErrors] = useState({}); // Hata mesajlarını tutan state.
+  const [isValid, setIsValid] = useState(false); // Formun geçerli olup olmadığını kontrol eden state.
+  const history = useHistory(); // Sayfa yönlendirmelerini yönetmek için kullanılır.
 
-  // Form değişikliklerini işleyen fonksiyon
+  // Form değişikliklerini işleyen fonksiyon.
   const handleChange = (event) => {
     const { name, value, type, checked } = event.target;
     setForm({ ...form, [name]: type === 'checkbox' ? checked : value });
   };
 
-  // Form geçerliliğini kontrol eden fonksiyon
+  // Form geçerliliğini kontrol eden fonksiyon.
   const validateForm = () => {
     const newErrors = {};
 
