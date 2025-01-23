@@ -3,7 +3,7 @@
 describe('Login Form Test', () => {
     it('should submit successfully when form is valid', () => {
       // Login sayfasına gidiyoruz
-      cy.visit('http://localhost:5173');  // Burada "/" ana sayfanın URL'si, buna kendi sayfanızın URL'sini yazın
+      cy.visit('http://localhost:5173');  // Burada, kendi sayfanızın URL'sini yazın.
       
       // Formu doğru bilgilerle dolduruyoruz
       cy.get('input[name="email"]').type('valid@example.com');
@@ -13,8 +13,8 @@ describe('Login Form Test', () => {
       // Gönder butonuna tıklıyoruz
       cy.get('button[type="submit"]').click();
       
-      // Başarı sayfasına yönlendirilip yönlendirilmediğimizi kontrol ediyoruz
-      cy.url().should('include', '/main');  // Eğer kullanıcı başarıyla yönlendirilirse URL "/main" olmalı
+      // Başarı sayfasına yönlendirilip yönlendirilmediğimizi kontrol ediyoruz.
+      cy.url().should('include', '/main');  // Eğer kullanıcı başarıyla yönlendirilirse URL "/main" olmalı.
     });
   });
   
